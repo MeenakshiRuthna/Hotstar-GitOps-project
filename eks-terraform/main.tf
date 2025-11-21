@@ -114,7 +114,7 @@ provider "aws" {
  # data source 
  data "aws_vpc" "main" {
   tags = {
-    Name = "jumphost22-vpc"  # Specify the name of your existing VPC
+    Name = "Jumphost22-vpc"  # Specify the name of your existing VPC
   }
 }
 
@@ -137,7 +137,7 @@ data "aws_security_group" "selected" {
   vpc_id = data.aws_vpc.main.id
   filter {
     name = "tag:Name"
-    values = ["jumphost22-sg"]
+    values = ["Jumphost22-sg"]
  }
 }
 
