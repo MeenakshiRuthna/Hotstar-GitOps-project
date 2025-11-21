@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'master', url: 'https://github.com/arumullayaswanth/Hotstar-GitOps-project.git'
+                git branch: 'master', url: 'https://github.com/MeenakshiRuthna/Hotstar-GitOps-project.git'
             }
         }
         stage("List Files") {
