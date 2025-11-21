@@ -37,7 +37,7 @@ provider "aws" {
   }
 
   resource "aws_iam_role" "worker" {
-    name = "yaswanth-eks-worker1"
+    name = "yaswanth-eks-worker2"
 
     assume_role_policy = jsonencode({
       "Version": "2012-10-17",
@@ -114,7 +114,7 @@ provider "aws" {
  # data source 
  data "aws_vpc" "main" {
   tags = {
-    Name = "Jumphost-vpc"  # Specify the name of your existing VPC
+    Name = "jumphost22-vpc"  # Specify the name of your existing VPC
   }
 }
 
@@ -137,7 +137,7 @@ data "aws_security_group" "selected" {
   vpc_id = data.aws_vpc.main.id
   filter {
     name = "tag:Name"
-    values = ["Jumphost-sg"]
+    values = ["jumphost22-sg"]
  }
 }
 
