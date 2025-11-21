@@ -143,7 +143,7 @@ data "aws_security_group" "selected" {
 
  #Creating EKS Cluster
   resource "aws_eks_cluster" "eks" {
-    name     = "project-eks"
+    name     = "projecttt-eks"
     role_arn = aws_iam_role.master.arn
 
     vpc_config {
